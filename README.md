@@ -11,7 +11,7 @@ The **Folder Structure Generator** is a Python CLI program that automatically cr
 ### How to Use 
 
 1. **Run the program:**
-   ```bash
+   ```bash 
    python generator.py
    ```
 
