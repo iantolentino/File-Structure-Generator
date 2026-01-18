@@ -12,7 +12,7 @@ def calculate_tree_depth(line):
         if char in ['├', '└']:
             # Depth = position / 4 (since each level is 4 chars)
             return i // 4 + 1
-    
+     
     # If no ├ or └ found, check if it's a continuation line (starts with │)
     if line.strip().startswith('│'):
         # Find the position after │
