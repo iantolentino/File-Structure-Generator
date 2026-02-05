@@ -1,23 +1,23 @@
-# 📁 Folder Structure Generator
+# Folder Structure Generator
 
-A powerful Python tool that automatically generates folder structures from tree diagrams or simple path lists. Perfect for quickly scaffolding projects, creating documentation examples, or setting up consistent directory layouts.
+A tool that automatically generates folder structures from tree diagrams or simple path lists. Perfect for quickly scaffolding projects, creating documentation examples, or setting up consistent directory layouts.
 
-## ✨ Features
+## Features
 
-- **🌳 Tree Diagram Parser**: Parse visual tree structures (with ├, │, └ characters)
-- **📝 Path List Parser**: Parse simple path lists (one path per line)
-- **🔍 Smart Parsing**: Automatically detects folder vs file based on naming patterns
-- **📊 Progress Display**: Real-time feedback on created folders and files
-- **🔄 Overwrite Protection**: Asks before overwriting existing directories
-- **📈 Statistics**: Shows count of created folders and files
-- **🎯 Cross-Platform**: Works on Windows, macOS, and Linux
+- ** Tree Diagram Parser**: Parse visual tree structures (with ├, │, └ characters)
+- ** Path List Parser**: Parse simple path lists (one path per line)
+- ** Smart Parsing**: Automatically detects folder vs file based on naming patterns
+- ** Progress Display**: Real-time feedback on created folders and files
+- ** Overwrite Protection**: Asks before overwriting existing directories
+- ** Statistics**: Shows count of created folders and files
+- ** Cross-Platform**: Works on Windows, macOS, and Linux
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Python 3.6 or higher
 - No external dependencies required (uses only standard library)
 
-## 🚀 Installation
+## Installation
 
 1. **Clone or download** the script:
    ```bash
@@ -34,7 +34,7 @@ A powerful Python tool that automatically generates folder structures from tree 
    chmod +x folder_generator.py
    ```
 
-## 📖 Usage
+## Usage
 
 ### Basic Usage
 
@@ -96,7 +96,7 @@ python folder_generator.py --input structure.txt --force
 python folder_generator.py --debug
 ```
 
-## 📝 Input Formats
+## Input Formats
 
 ### Format 1: Tree Diagram (Recommended)
 
@@ -152,7 +152,7 @@ project/README.md
 
 **Note**: Folders should end with `/` or be listed before their contents.
 
-## 🎯 Examples
+## Examples
 
 ### Example 1: Web Application Structure
 
@@ -254,7 +254,7 @@ def create_structure_with_content(base_path, operations, file_templates=None):
                 f.write(content)
 ```
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -284,7 +284,7 @@ python folder_generator.py
 
 When asked: "Show debug parsing info? (y/N):" press `y`
 
-## 📁 Output Structure
+## Output Structure
 
 The tool creates:
 - All specified folders (with proper nesting)
@@ -301,7 +301,7 @@ The tool creates:
 📄 Created file: my_project/README.md
 ```
 
-## 🔄 Updating Existing Structures
+## Updating Existing Structures
 
 The tool will:
 1. Detect if the target folder already exists
@@ -309,13 +309,13 @@ The tool will:
 3. Completely remove existing folder if confirmed
 4. Create fresh structure from your input
 
-## 📊 Performance
+## Performance
 
 - **Fast**: Creates hundreds of files/folders in seconds
 - **Memory Efficient**: Processes structures line by line
 - **Reliable**: Robust error handling and validation
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -339,17 +339,17 @@ source venv/bin/activate
 pip install -r requirements-dev.txt
 ```
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Inspired by various project scaffolding tools
 - Uses Python's standard library for maximum compatibility
 - Unicode tree characters from box-drawing character set
 
-## 📞 Support
+## Support
 
 For issues, questions, or feature requests:
 1. Check the troubleshooting section
@@ -361,4 +361,4 @@ For issues, questions, or feature requests:
 
 ---
 
-**Happy Scaffolding! 🚀**
+**Happy Scaffolding!**
