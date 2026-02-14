@@ -1,6 +1,6 @@
 import os
 import re
-from pathlib import Path
+from pathlib import Path 
 
 def calculate_tree_depth(line):
     """
@@ -357,3 +357,4 @@ if __name__ == "__main__":
     
     # Keep console open
     input("\nPress Enter to exit...")
+
