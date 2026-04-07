@@ -1,4 +1,4 @@
-# Folder Structure Generator
+# File Structure Generator
 
 Generate full directory hierarchies instantly by pasting a tree diagram into your terminal.
 
