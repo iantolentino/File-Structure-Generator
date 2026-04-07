@@ -1,12 +1,10 @@
-## File Structure Generator
+# Folder Structure Generator
 
-This CLI utility converts a plain-text tree structure (copied from a prompt or documentation) into actual folders and files on your local machine. It automatically detects the root project name from the input and creates the directory hierarchy instantly.
+Generate full directory hierarchies instantly by pasting a tree diagram into your terminal.
 
------
+### Quick Start (No Installation Required)
 
-### Quick Start
-
-To run the generator without installing anything, use the following command in your terminal:
+Run this command to start the generator immediately:
 
 **Windows (PowerShell):**
 
@@ -20,37 +18,72 @@ curl.exe -sL https://tinyurl.com/generate-structure -o gen.py; python gen.py
 curl -sL https://tinyurl.com/generate-structure | python3
 ```
 
+**How to use:**
+
+1.  Open a terminal/powershell and navigate to the parent directory where you want your project created.
+2.  Run the command.
+3.  Paste your tree structure (e.g., from a prompt or documentation).
+4.  Hit **Enter** twice (or type `END` on a new line) to build.
+
 -----
 
-### Usage Instructions
+### Terminal Workflow
 
-1.  Run the command provided above.
-2.  Paste your folder structure directly into the terminal.
-3.  Press **Enter** twice or type **END** on a new line to finish.
-4.  The tool will automatically create the root directory and all sub-folders/files.
+When you run the command, the process follows this logic:
 
-**Example Input:**
+1.  **Prompt:**
+    `PASTE STRUCTURE BELOW (Hit Enter twice or type 'END' to finish):`
+2.  **User Input (Example):**
+    ```text
+    my-app/
+    ├── src/
+    │   └── main.py
+    └── README.md
+    ```
+3.  **Action:** Hit **Enter** twice.
+4.  **Output:**
+    `Created: my-app/`
+    `Path: C:\Users\Username\Documents\my-app`
 
-```text
-my-web-app/
-├── src/
-│   ├── index.html
-│   └── styles.css
-└── README.md
+-----
+
+### Features
+
+  * **Instant Scaffolding**: Detects the root folder name automatically from the first line of your paste.
+  * **Robust Parser**: Handles standard tree characters (`├`, `│`, `└`) and 4-space indentation.
+  * **Zero Friction**: No cloning or external dependencies required.
+  * **Smart Cleanup**: Automatically replaces existing folders of the same name for a fresh build.
+  * **Cross-Platform**: Compatible with Windows, macOS, and Linux.
+
+-----
+
+### Advanced Configuration
+
+#### Create a Terminal Shortcut (Alias)
+
+To use the tool anytime by typing `mktree`:
+
+**Windows (PowerShell Profile):**
+
+```powershell
+function mktree { 
+    curl.exe -sL https://tinyurl.com/generate-structure -o $env:TEMP\gen.py
+    python $env:TEMP\gen.py
+}
+```
+
+**macOS / Linux:**
+
+```bash
+alias mktree="curl -sL https://tinyurl.com/generate-structure | python3"
 ```
 
 -----
 
-### Technical Features
+### Troubleshooting
 
-  * **Auto-Root Detection:** The tool identifies the first line of your paste as the project root and avoids nested duplicate folders.
-  * **Intelligent Parsing:** Handles various tree characters (├, └, │) and indentation levels (4-space standard).
-  * **Automatic Overwrite:** If a folder with the same name exists, it will be replaced to ensure a clean setup.
-  * **No Dependencies:** Uses standard Python libraries (os, shutil, traceback).
+  * **Pasting issues on Windows**: If the terminal buffer cuts off your paste, ensure you type `END` on a new line after pasting.
+  * **Permission Denied**: Ensure you have write permissions for the directory where you are running the script.
+  * **Python Version**: Requires **Python 3.6+**.
 
------
-
-### Links
-
-  * **Source Script:** [https://raw.githubusercontent.com/iantolentino/File-Structure-Generator/main/generator.py](https://www.google.com/search?q=https://raw.githubusercontent.com/iantolentino/File-Structure-Generator/main/generator.py)
-  * **Short Link:** [https://tinyurl.com/generate-structure](https://tinyurl.com/generate-structure)
+**Developed by [iantolentino](https://www.google.com/search?q=https://github.com/iantolentino)**
