@@ -4,7 +4,7 @@ Generate full directory hierarchies instantly by pasting a tree diagram into you
 
 ### Quick Start (No Installation Required)
 
-Run this command to start the generator immediately:
+Run this command to start the generator immediately: 
 
 **Windows (PowerShell):**
 
