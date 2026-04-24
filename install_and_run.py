@@ -3,32 +3,26 @@ import subprocess
 import sys
 
 REPO_URL = "https://github.com/iantolentino/File-Structure-Generator.git"
-FOLDER_NAME = "File-Structure-Generator"
+FOLDER = "File-Structure-Generator"
 
 def main():
-    print("Cloning Project Generator...")
+    print("Cloning repository...")
 
-    # Clone repo
-    if os.path.exists(FOLDER_NAME):
-        print("Repo already exists, pulling latest changes...")
-        subprocess.run(["git", "-C", FOLDER_NAME, "pull"])
+    if os.path.exists(FOLDER):
+        print("Updating existing repo...")
+        subprocess.run(["git", "-C", FOLDER, "pull"], check=False)
     else:
-        subprocess.run(["git", "clone", REPO_URL])
+        subprocess.run(["git", "clone", REPO_URL], check=True)
 
-    os.chdir(FOLDER_NAME)
+    os.chdir(FOLDER)
 
     print("Installing dependencies...")
-    subprocess.run([sys.executable, "-m", "pip", "install", "-e", "."])
+    subprocess.run([sys.executable, "-m", "pip", "install", "-e", "."], check=True)
 
     print("Running CLI...\n")
 
-    try:
-        from project_gen import cli
-        cli.main()
-    except Exception as e:
-        print("Failed to run CLI:")
-        print(e)
-        print("\nCheck if cli.py exists and has main() function.")
+    # IMPORTANT: run as module (avoids import path issues)
+    subprocess.run([sys.executable, "-m", "project_gen.cli"])
 
 if __name__ == "__main__":
     main()
